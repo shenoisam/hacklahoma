@@ -39,7 +39,8 @@ let myChart = document.getElementById('myChart').getContext('2d');
         title:{
           display:true,
           text:'Largest Cities In Massachusetts',
-          fontSize:25
+          fontSize:25,
+          fontColor:green
         },
         legend:{
           display:true,
