@@ -33,7 +33,6 @@ var herro = function(getData)
      console.log(resultArray[0])
 
      client.close();
-     setTimeout('alert("finishingMiddleFunction");', 300);
    });
   });
   console.log('----BEFORE RETURN FUNCTION-----')
