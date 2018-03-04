@@ -6,11 +6,15 @@
 var express = require('express')
 var logger = require('morgan')
 var bodyParser = require('body-parser')
+var AWS = require('aws-sdk');
+var s3 = new AWS.S3();
+var mysql = require('mysql');
 
 
 //Add in modules
-var d = require(__dirname+'/vitechDataExtraction.js');
-
+var vDataAbs = require(__dirname+'/nodeServerJSFiles/vitechDataExtraction.js');
+var AWSdata = require(__dirname+'/nodeServerJSFiles/AWSdata.js');
+var pageTurn = require(__dirname+'/nodeServerJSFiles/pageTurns');
 //Create instance of express app
 var app = express()
 
@@ -30,17 +34,11 @@ app.use(bodyParser.urlencoded({ extended: true}))
 //This pretty much just logs stuff out for us.
 app.use(logger('dev'))
 
+
 //Page turner nav bar responses
-app.get('/',function(request,response){
-  response.render('index.ejs')
-
-})
-app.post('/movePage',function(request,response){
-  response.render('vitechGetData.ejs')
-
-})
-app.get('/getData',d.s)
-
+app.get('/',AWSdata.getFiles,pageTurn.home)
+app.post('/movePage',pageTurn.getD)
+app.get('/getData',vDataAbs.search,pageTurn.home)
 
 
 //Set the port that you wish the server to listen to

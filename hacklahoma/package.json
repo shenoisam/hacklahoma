@@ -9,10 +9,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.205.0",
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
     "node-fetch": "^2.0.0"
   }
 }
