@@ -36,7 +36,7 @@ app.use(logger('dev'))
 
 
 
-var uri = "mongodb://mario:@cluster0-shard-00-00-dwmeo.mongodb.net:27017,cluster0-shard-00-01-dwmeo.mongodb.net:27017,cluster0-shard-00-02-dwmeo.mongodb.net:27017/admin?replicaSet=Cluster0-shard-0&ssl=true";
+var uri = "mongodb+srv://mario:Gibson123@cluster0-dwmeo.mongodb.net/vitech_app";
 MongoClient.connect(uri, function(err, client) {
   const collection = client.db("test").collection("devices");
   // perform actions on the collection object
