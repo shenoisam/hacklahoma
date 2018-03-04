@@ -13,7 +13,7 @@ var getD = function(request,response){
 }
 
  var gochart = function(request,response){
-  response.render('charts.ejs')
+  response.render('chart.ejs')
 }
 
 module.exports = {getD,gohome,gomap,gochart}

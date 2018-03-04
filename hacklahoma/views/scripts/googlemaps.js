@@ -29,11 +29,11 @@ var markers = [
 {
 coords:{lat:42.4668,lng:-70.9495},
 iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-content:'<h1>Lynn MA</h1>'
+content:'<h5>Lynn MA</h5>'
 },
 {
   coords:{lat:42.8584,lng:-70.9300},
-  content:'<h1>Amesbury MA</h1>'
+  content:'<h5>Amesbury MA</h5>'
 },
 {
   coords:{lat:42.7762,lng:-71.0773}
