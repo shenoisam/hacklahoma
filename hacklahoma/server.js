@@ -8,12 +8,12 @@ var bodyParser = require('body-parser')
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
 var mysql = require('mysql');
-var MongoClient = require('mongodb').MongoClient;
+
 
 
 //Add in modules
-//var vDataAbs = require(__dirname+'/nodeServerJSFiles/vitechDataExtraction.js');
-//var AWSdata = require(__dirname+'/nodeServerJSFiles/AWSdata.js');
+
+var mongoDBFuncs = require(__dirname+'/nodeServerJSFiles/mongoDBFuncs.js');
 var pageTurn = require(__dirname+'/nodeServerJSFiles/pageTurns');
 //Create instance of express app
 var app = express()
@@ -36,16 +36,10 @@ app.use(logger('dev'))
 
 
 
-var uri = "mongodb+srv://mario:Gibson123@cluster0-dwmeo.mongodb.net/vitech_app";
-MongoClient.connect(uri, function(err, client) {
-  const collection = client.db("test").collection("devices");
-  // perform actions on the collection object
-  client.close();
 
-});
 
 //Page turner nav bar responses
-app.get('/',pageTurn.home)
+app.get('/',mongoDBFuncs.getData,pageTurn.home)
 app.post('/movePage',pageTurn.getD)
 app.get('/getData',pageTurn.home)
 
