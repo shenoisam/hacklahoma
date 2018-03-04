@@ -3,15 +3,20 @@
   height: 800px;
   width: 100%;
 }
+
 *{
   margin: 0;
   padding: 0;
+}
+
+.button {
+	padding-bottom: 10px;
 }
 
 
 .p{
   color: blue;
 }
-#u2{
+#u2 {
   background-color: green;
 }

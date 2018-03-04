@@ -8,6 +8,9 @@ var logger = require('morgan')
 var bodyParser = require('body-parser')
 
 
+//Add in modules
+var d = require(__dirname+'/vitechDataExtraction.js');
+
 //Create instance of express app
 var app = express()
 
@@ -29,9 +32,14 @@ app.use(logger('dev'))
 
 //Page turner nav bar responses
 app.get('/',function(request,response){
-  response.render('index.html')
+  response.render('index.ejs')
 
 })
+app.post('/movePage',function(request,response){
+  response.render('vitechGetData.ejs')
+
+})
+app.get('/getData',d.s)
 
 
 
