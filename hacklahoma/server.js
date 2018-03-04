@@ -39,7 +39,7 @@ app.use(logger('dev'))
 
 
 //Page turner nav bar responses
-app.get('/',mongoDBFuncs.getData,pageTurn.home)
+app.get('/',pageTurn.home,mongoDBFuncs.getData)
 app.post('/movePage',pageTurn.getD)
 app.get('/getData',pageTurn.home)
 

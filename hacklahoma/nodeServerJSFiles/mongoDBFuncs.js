@@ -1,25 +1,35 @@
+var fs = require('fs');
 var MongoClient = require('mongodb').MongoClient;
 var uri = "mongodb+srv://mario:Gibson123@cluster0-dwmeo.mongodb.net/vitech_app";
 
+//Get Data from the MongoDB Database instance
 var getData = function(response, request, next)
 {
+  console.log("Getting data ....")
+  var resultArray = [];
+  //Connect to MongoDB
   MongoClient.connect(uri, function(err, client) {
    if(err){
      throw err;
    }
    var dbo = client.db("vitech_app")
-   dbo.collection("participant").find({latitude: 1, lognitude: 1, state: 1}).toArray(function(err, result) {
-    if (err) throw err;
-    client.close();
 
-    result[1] = "hello?"
-    var mark = (result.length);
-    console.log(mark)
-    request = result;
-    next();
+   //Get the participants Coll
+   var cursor = dbo.collection("participant").find({
+     'response.docs.state': "Alaska"
    });
-  });
+   console.log(cursor);
+   cursor.forEach(function(doc, err)
+   {
+      resultArray.push(doc);
+   }, function(){
+     console.log("Finished getting data");
+     console.log(resultArray.length)
+     client.close();
+   });
+});
 }
+
 
 
 module.exports = {getData}
