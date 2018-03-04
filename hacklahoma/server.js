@@ -1,6 +1,5 @@
 // This file contains the instructions for the server.
 // The server is pretty much in charge of setting the content to be displayed using HTTP commands
-// The google API key: AIzaSyBklx0NJ6k6BhH41zLL05tTWQxLXyUG4hw
 
 //Included libraries from the node modules
 var express = require('express')
@@ -36,9 +35,9 @@ app.use(logger('dev'))
 
 
 //Page turner nav bar responses
-app.get('/',AWSdata.getFiles,pageTurn.home)
+app.get('/',pageTurn.home)
 app.post('/movePage',pageTurn.getD)
-app.get('/getData',vDataAbs.search,pageTurn.home)
+app.get('/getData',pageTurn.home)
 
 
 //Set the port that you wish the server to listen to
