@@ -1,16 +1,3 @@
-
- // function initMap(){
-
- //   var location  = {lat: 31.549333, lng: -97.146670};
- //   var map = new google.maps.Map(document.getElementById("map"),{
- //     zoom: 4,
- //     center: location
- //     });
- //   var marker = new google.maps.Marker({
- //       position: location,
- //       map: map
- //     });
-
 //customize how the map creates
 function initMap(){
 var options = {
@@ -21,29 +8,13 @@ var map = new google.maps.Map(document.getElementById('map'), options);
 
 //Listener for the map
 google.maps.event.addListener(map, 'click', function(event){
-addMarker({coords:event.latLng, iconImage:'../favicon.png'});
+addMarker({
+  coords:event.latLng, 
+  iconImage:'../favicon.png',
+  content:'<h5>NA<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+});
 });
 
-//temp array of markers
-// var markers = [
-// {
-// coords:{lat:42.4668,lng:-70.9495},
-// iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-// content:'<h5>Lynn MA</h5>'
-// },
-// {
-//   coords:{lat:42.40,lng:-73.45},
-//   content:'<h5>Albany, NY</h5>'
-// },
-// {
-//   coords:{lat:42.7762,lng:-71.0773},
-//   content:'<h5>Amesbury MA</h5>'
-// },
-// {
-//   coords:{lat:33.45,lng:-84.23}
-//   content:'<h5>Atlanta,GA</h5>'
-// }
-// ];
 var markers = [
   {
   coords:{lat:42.4668,lng:-70.9495},
