@@ -24,7 +24,7 @@
 
 #navbar {
 	background-image: url("menu_background.jpeg") !important;
-    background-color: #cccccc;
+  background-color: #cccccc !important;
 	position: fixed !important;
 	width: 100% !important;
 	border-radius: 0 !important;
