@@ -2,9 +2,16 @@ var getD = function(request,response){
   response.render('vitechGetData.ejs')
 
 }
- var home = function(request,response,next){
+ var gohome = function(request,response){
   response.render('index.ejs')
-  next();
 }
 
-module.exports = {getD,home}
+ var gomap = function(request,response){
+  response.render('map.ejs')
+}
+
+ var gochart = function(request,response){
+  response.render('chart.ejs')
+}
+
+module.exports = {getD,gohome,gomap,gochart}

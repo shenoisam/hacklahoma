@@ -74,8 +74,11 @@
 }
 
 h1 {
+  margin-top: 400px;
   text-align: center;
   vertical-align: middle;
+  color: #000000;
   font-family: arial;
-  font-size: 48;
+  font-size: 72;
+  font-weight: bold;
 }
