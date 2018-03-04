@@ -8,6 +8,7 @@ var bodyParser = require('body-parser')
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
 var mysql = require('mysql');
+var MongoClient = require('mongodb').MongoClient;
 
 
 //Add in modules
@@ -33,6 +34,15 @@ app.use(bodyParser.urlencoded({ extended: true}))
 //This pretty much just logs stuff out for us.
 app.use(logger('dev'))
 
+
+
+var uri = "mongodb://mario:@cluster0-shard-00-00-dwmeo.mongodb.net:27017,cluster0-shard-00-01-dwmeo.mongodb.net:27017,cluster0-shard-00-02-dwmeo.mongodb.net:27017/admin?replicaSet=Cluster0-shard-0&ssl=true";
+MongoClient.connect(uri, function(err, client) {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+
+});
 
 //Page turner nav bar responses
 app.get('/',pageTurn.home)
