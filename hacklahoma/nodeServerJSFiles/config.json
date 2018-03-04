@@ -1,6 +1,6 @@
 {
     "dbhost" : "cbears-hacklahoma.ckgzixjdcowi.us-east-2.rds.amazonaws.com",
-    "dbname" : "cbearsvitechproject",
+    "dbname" : "vitech_project",
     "dbuser" :"mario",
     "dbpassword" :"Gibson123"
 }
