@@ -1,0 +1,106 @@
+#map{
+  border-radius: 0px;
+  min-height: 500px;
+  height: 870px;
+  width: 100%;
+  margin-top: 70px;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.button {
+	padding-bottom: 10px;
+}
+
+
+.p{
+  color: blue;
+}
+#u2 {
+  background-color: green;
+}
+
+#navbar {
+	background-image: url("menu_background.jpeg") !important;
+  background-color: #cccccc !important;
+	position: fixed !important;
+	width: 100% !important;
+	border-radius: 0 !important;
+}
+
+#carouselExampleControls {
+  margin-top: 70px;
+  width: 100%;
+  min-height: 500px;
+  height: 500px;
+}
+
+.carousel-control-prev-icon {
+ background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+}
+
+.carousel-control.left, .carousel-control.right {
+   background-image:none !important;
+   filter:none !important;
+}
+
+canvas {
+  margin-top: 70px;
+}
+
+.legend {
+  margin-top: 250px;
+  width: 150px;
+  height: 300px;
+  position: absolute;
+  float: left;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  background-color: #545B62;
+  opacity: 0.7;
+}
+
+.btn-secondary {
+  border-width: 0px;
+  border-style: none !important;
+}
+
+.dropdown-item {
+  opacity: 1 !important;
+}
+
+h1 {
+  margin-top: 400px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(255,255,255,1);
+  font-family: arial;
+  font-size: 72;
+  font-weight: bold;
+}
+
+h3 {
+  margin-top: 500px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(255,255,255,1);
+  font-family: arial;
+  font-size: 56;
+  font-weight: bold;
+}
+
+body {
+  background:  url(https://media.giphy.com/media/7GHRDluBmx9O8/giphy.gif);
+  padding-top: 70px;
+  height: 800px;
+  background-size: cover;
+  width: 100%;
+}
