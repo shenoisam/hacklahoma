@@ -45,10 +45,12 @@
   <form action="/getData" method="GET">
       <button type="submit">GetData</button>
   </form>
-  <script>
-    alert("This stuff");
-    alert(data);
-  </script>
+  <script><% for(let i = 0; i < data.length; i++) { %>
+
+            <h2><%= data[i].longitute %></h1>
+            <p><%= data[i].latitute %></p>
+
+    <% } %></script>
 
 
 
