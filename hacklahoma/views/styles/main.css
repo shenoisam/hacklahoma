@@ -51,6 +51,10 @@
    filter:none !important;
 }
 
+canvas {
+  margin-top: 70px;
+}
+
 .legend {
   margin-top: 250px;
   width: 150px;
