@@ -14,7 +14,7 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <form action="/movePage" method="POST"> 
+      <form action="/movePage" method="POST">
       </form>
       <li class="nav-item">
         <a class="nav-link" href="#">Link</a>
@@ -44,6 +44,13 @@
   <form action="/getData" method="GET">
       <button type="submit">GetData</button>
   </form>
+
+
+  <!--Get the data from the data-->
+  var ejs = require('ejs'),
+  ejs.render(<%-JSON.stringify(data)%>)
+  console.log("THE ROWS ARE: "rows);
+
 
  <!--Bootstrap JS Files -->
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

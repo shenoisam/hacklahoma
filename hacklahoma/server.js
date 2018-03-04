@@ -34,9 +34,9 @@ app.use(logger('dev'))
 
 
 //Page turner nav bar responses
-app.get('/',pageTurn.home,mongoDBFuncs.getData)
+app.get('/',mongoDBFuncs.getData,pageTurn.home)
 app.post('/movePage',pageTurn.getD)
-app.get('/getData',pageTurn.home)
+app.post('/getData',pageTurn.getD)
 
 
 //Set the port that you wish the server to listen to

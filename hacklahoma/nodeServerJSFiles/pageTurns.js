@@ -1,10 +1,11 @@
+var dataArray;
 var getD = function(request,response){
-  response.render('vitechGetData.ejs')
+  response.render('VitechGetData.ejs', {data: dataArray})
 
 }
  var home = function(request,response,next){
   response.render('index.ejs')
-  next();
+  dataArray = request.resultArray;
 }
 
 module.exports = {getD,home}

@@ -28,7 +28,7 @@ var getData = function(response, request, next)
      request = resultArray;
 
      console.log(resultArray[0]);
-
+      next();
      client.close();
    });
 });
