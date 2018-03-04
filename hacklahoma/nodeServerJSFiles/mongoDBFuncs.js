@@ -17,19 +17,18 @@ var getData = function(response, request, next)
    //Get the participants Coll
    var cursor = dbo.collection("participant").find({
      'state': "Alaska"
-   });
+   })
 
    cursor.forEach(function(doc, err)
    {
       resultArray.push(doc);
    }, function(){
-     console.log("Finished getting data");
-     console.log(resultArray.length)
-     request = resultArray;
 
-     console.log(resultArray[0]);
-      next();
+     console.log("Finished getting data...Closing File stream to f")
      client.close();
+     console.log(resultArray[0])
+     return resultArray;
+
    });
 });
 }

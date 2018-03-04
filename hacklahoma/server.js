@@ -33,8 +33,9 @@ app.use(bodyParser.urlencoded({ extended: true}))
 app.use(logger('dev'))
 
 
+
 //Page turner nav bar responses
-app.get('/',mongoDBFuncs.getData,pageTurn.home)
+app.get('/',pageTurn.home)
 app.post('/movePage',pageTurn.getD)
 app.post('/getData',pageTurn.getD)
 
