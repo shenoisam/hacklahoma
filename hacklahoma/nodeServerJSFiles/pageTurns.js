@@ -1,11 +1,16 @@
-var dataArray;
+var mongodbFuncs = require(__dirname+'/mongodbFuncs.js');
+
 var getD = function(request,response){
-  response.render('VitechGetData.ejs', {data: dataArray})
+
+console.log(mongodbFuncs.getData()[0])
+  //dataArray = request.resultArray;
+  var arr  = mongodbFuncs.getData();
+  response.render('VitechGetData.ejs', { data: arr})
 
 }
+
  var gohome = function(request,response){
   response.render('index.ejs')
-  dataArray = request.resultArray;
 }
 
  var gomap = function(request,response){

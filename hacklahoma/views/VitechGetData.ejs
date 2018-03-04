@@ -2,6 +2,7 @@
 <html>
  <head>
    <title>Vitech GetData</title>
+   <script src="scripts/randoJS.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
@@ -43,11 +44,22 @@
   </div>
 </nav>
 
-
+<h1 id="t"></h1>
 
   <form action="/getData" method="GET">
       <button type="submit">GetData</button>
   </form>
+  <script><% for(let i = 0; i < data.length; i++) { %>
+
+            <h2><%= data[i].longitute %></h1>
+            <p><%= data[i].latitute %></p>
+
+    <% } %></script>
+
+
+
+  <!--Get the data from the data-->
+
 
  <!--Bootstrap JS Files -->
    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
