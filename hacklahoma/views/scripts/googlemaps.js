@@ -15,29 +15,81 @@
 function initMap(){
 var options = {
   zoom:8,
-  center:{lat:31.5497,lng:-97.1143}
+  center:{lat:35.2059,lng:-97.4457}
 }
 var map = new google.maps.Map(document.getElementById('map'), options);
 
 //Listener for the map
 google.maps.event.addListener(map, 'click', function(event){
-addMarker({coords:event.latLng});
+addMarker({coords:event.latLng, iconImage:'../favicon.png'});
 });
 
 //temp array of markers
+// var markers = [
+// {
+// coords:{lat:42.4668,lng:-70.9495},
+// iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+// content:'<h5>Lynn MA</h5>'
+// },
+// {
+//   coords:{lat:42.40,lng:-73.45},
+//   content:'<h5>Albany, NY</h5>'
+// },
+// {
+//   coords:{lat:42.7762,lng:-71.0773},
+//   content:'<h5>Amesbury MA</h5>'
+// },
+// {
+//   coords:{lat:33.45,lng:-84.23}
+//   content:'<h5>Atlanta,GA</h5>'
+// }
+// ];
 var markers = [
-{
-coords:{lat:42.4668,lng:-70.9495},
-iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-content:'<h5>Lynn MA</h5>'
-},
-{
+  {
+  coords:{lat:42.4668,lng:-70.9495},
+  iconImage:'../favicon.png',
+  content:'<h5>Lynn MA<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
   coords:{lat:42.8584,lng:-70.9300},
-  content:'<h5>Amesbury MA</h5>'
-},
-{
-  coords:{lat:42.7762,lng:-71.0773}
-}
+  iconImage:'../favicon.png',
+  content:'<h5>Lynn MA<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:39.6,lng:-94.35},
+  iconImage:'../favicon.png',
+  content:'<h5>Kansas City, Mo<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:35.57,lng:-83.56},
+  iconImage:'../favicon.png',
+  content:'<h5>Knoxville, Tenn.<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:42.40,lng:-73.45},
+  iconImage:'../favicon.png',
+  content:'<h5>Albany, NY<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:37.47,lng:-122.26},
+  iconImage:'../favicon.png',
+  content:'<h5>San Francisco, Calif.<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:57.10,lng:-135.15},
+  iconImage:'../favicon.png',
+  content:'<h5>Sitka, Alaska<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:36.10,lng:-115.2},
+  iconImage:'../favicon.png',
+  content:'<h5>Las Vegas, NV<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  },
+  {
+  coords:{lat:33.45,lng:-84.23},
+  iconImage:'../favicon.png',
+  content:'<h5>Atlanta, GA, NV<br>Average Salary: N/A<br>Bronze Members: N/A<br>Silver Members: N/A<br>Plat Members: N/A</h5>'
+  }
 ];
 
 //Add markers to map

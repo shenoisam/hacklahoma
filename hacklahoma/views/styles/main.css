@@ -68,6 +68,10 @@ canvas {
   opacity: 0.7;
 }
 
+.dropdown-menu {
+  position: relative;
+}
+
 .btn-secondary {
   border-width: 0px;
   border-style: none !important;
@@ -88,6 +92,8 @@ h1 {
 }
 
 h5 {
-  margin: 0px;
+  margin: 10px;
   padding: 0px;
+  text-align: center;
+  font-size: 15;
 }
