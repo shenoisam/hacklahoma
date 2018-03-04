@@ -8,6 +8,7 @@ var bodyParser = require('body-parser')
 var AWS = require('aws-sdk');
 var s3 = new AWS.S3();
 var mysql = require('mysql');
+var MongoClient = require('mongodb').MongoClient;
 
 
 //Add in modules
@@ -33,6 +34,15 @@ app.use(bodyParser.urlencoded({ extended: true}))
 //This pretty much just logs stuff out for us.
 app.use(logger('dev'))
 
+
+
+var uri = "mongodb+srv://mario:Gibson123@cluster0-dwmeo.mongodb.net/vitech_app";
+MongoClient.connect(uri, function(err, client) {
+  const collection = client.db("test").collection("devices");
+  // perform actions on the collection object
+  client.close();
+
+});
 
 //Page turner nav bar responses
 app.get('/',pageTurn.home)
