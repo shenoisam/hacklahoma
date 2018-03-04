@@ -27,9 +27,11 @@ var herro = function(getData)
    },
    function leggo (){
 
+
      console.log("Finished getting data...Closing File stream to f")
      console.log('-------Middle Function ---------')
      console.log(resultArray[0])
+
      client.close();
      setTimeout('alert("finishingMiddleFunction");', 300);
    });

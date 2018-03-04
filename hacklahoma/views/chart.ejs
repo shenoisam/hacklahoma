@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>C Bears Vitech Challenge</title>
+   <title>C Bears Data Visualizer</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <link rel='stylesheet' href='styles/main.css'>
@@ -10,38 +10,42 @@
 
 <!--Bootstrap Nav bar-->
 <nav class="navbar sticky-top bg-secondary navbar-expand-lg navbar-dark" id="navbar">
-  <button type="button" class="m-2 navbar-brand btn btn-dark active" href="#">C Bears Vitech Challenge</button>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <img src="favicon.png">
+  <button type="button" class="m-2 navbar-brand btn btn-dark active" href="#">C Bears Data Visualizer</button>
+  <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <button type="button" class="m-2 nav-link btn btn-dark active" href="#">Home <span class="sr-only">(current)</span></button>
+        <form action="/movePageHome" method="POST">
+         <button type="submit" class="m-2 nav-link btn btn-dark active">Home <span class="sr-only">(current)</span></button>
+        </form>
       </li>
       <li class="nav-item active">
-        <button type="button" class="m-2 nav-link btn btn-dark active" href="#">Graph 1</button>
+        <form action="/movePageMap" method="POST">
+         <button type="submit" class="m-2 nav-link btn btn-dark active">Map</button>
+        </form>
       </li>
       <li class="nav-item active">
-        <button type="button" class="m-2 nav-link btn btn-dark active" href="#">Graph 2</button>
+        <form action="/movePageChart" method="POST">
+         <button type="submit" class="m-2 nav-link btn btn-dark active">Charts</button>
+        </form>
       </li>
       <li class="nav-item active">
-        <button type="button" class="m-2 nav-link btn btn-dark active" href="#">Graph 3</button>
-      </li>
-      <li class="nav-item active">
-        <button type="button" class="m-2 nav-link btn btn-dark active">Get Data</button>
+        <a href="https://v3v10.vitechinc.com/hacklahoma/index.html"><button class="m-2 nav-link btn btn-dark active">See Challenge</button></a>
       </li>
     </ul>
       <form class="form-inline my-2 my-lg-0" style="float: right;">
           <input class="form-control mr-sm-2" type="search" placeholder="Search">
-          <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+          <button type="submit" class="btn btn-outline-secondary my-2 my-sm-0">Search</button>
       </form>
   </div>
 </nav>
 
 <!-- Charts Div -->
-<canvas id="myChart"></canvas>
+<canvas id="charts"></canvas>
 
 
  <!--Bootstrap JS Files -->
@@ -51,7 +55,7 @@
 
 <!-- Charts Scripts-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
-<script src="scripts/myChart.js"></script>
+<script src="scripts/charts.js"></script>
 
 </body>
 </html>

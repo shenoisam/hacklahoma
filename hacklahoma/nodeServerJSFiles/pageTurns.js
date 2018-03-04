@@ -8,10 +8,17 @@ console.log(mongodbFuncs.getData()[0])
   response.render('VitechGetData.ejs', { data: arr})
 
 }
- var home = function(request,response,next){
 
-  console.log("------PAGETURNERS INDEX----------")
+ var gohome = function(request,response){
   response.render('index.ejs')
 }
 
-module.exports = {getD,home}
+ var gomap = function(request,response){
+  response.render('map.ejs')
+}
+
+ var gochart = function(request,response){
+  response.render('charts.ejs')
+}
+
+module.exports = {getD,gohome,gomap,gochart}

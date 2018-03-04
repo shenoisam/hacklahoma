@@ -35,9 +35,12 @@ app.use(logger('dev'))
 
 
 //Page turner nav bar responses
-app.get('/',pageTurn.home)
-app.post('/movePage',pageTurn.getD)
-app.post('/getData',pageTurn.getD)
+app.get('/',pageTurn.gohome)
+app.post('/movePageData',pageTurn.getD)
+app.post('/movePageHome',pageTurn.gohome)
+app.post('/movePageMap',pageTurn.gomap)
+app.post('/movePageChart',pageTurn.gochart)
+app.get('/getData',pageTurn.getD)
 
 
 //Set the port that you wish the server to listen to

@@ -81,8 +81,26 @@ h1 {
   margin-top: 400px;
   text-align: center;
   vertical-align: middle;
-  color: #000000;
+  color: rgba(255,255,255,1);
   font-family: arial;
   font-size: 72;
   font-weight: bold;
+}
+
+h3 {
+  margin-top: 500px;
+  text-align: center;
+  vertical-align: middle;
+  color: rgba(255,255,255,1);
+  font-family: arial;
+  font-size: 56;
+  font-weight: bold;
+}
+
+body {
+  background:  url(https://media.giphy.com/media/7GHRDluBmx9O8/giphy.gif);
+  padding-top: 70px;
+  height: 800px;
+  background-size: cover;
+  width: 100%;
 }
