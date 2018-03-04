@@ -16,20 +16,22 @@ var getData = function(response, request, next)
 
    //Get the participants Coll
    var cursor = dbo.collection("participant").find({
-     'response.docs.state': "Alaska"
+     'state': "Alaska"
    });
-   console.log(cursor);
+
    cursor.forEach(function(doc, err)
    {
       resultArray.push(doc);
    }, function(){
      console.log("Finished getting data");
      console.log(resultArray.length)
+     request = resultArray;
+
+     console.log(resultArray[0]);
+
      client.close();
    });
 });
 }
-
-
 
 module.exports = {getData}
