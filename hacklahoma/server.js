@@ -12,8 +12,8 @@ var mysql = require('mysql');
 
 
 //Add in modules
-var vDataAbs = require(__dirname+'/nodeServerJSFiles/vitechDataExtraction.js');
-var AWSdata = require(__dirname+'/nodeServerJSFiles/AWSdata.js');
+//var vDataAbs = require(__dirname+'/nodeServerJSFiles/vitechDataExtraction.js');
+//var AWSdata = require(__dirname+'/nodeServerJSFiles/AWSdata.js');
 var pageTurn = require(__dirname+'/nodeServerJSFiles/pageTurns');
 //Create instance of express app
 var app = express()
@@ -36,9 +36,9 @@ app.use(logger('dev'))
 
 
 //Page turner nav bar responses
-app.get('/',AWSdata.getFiles,pageTurn.home)
+app.get('/',pageTurn.home)
 app.post('/movePage',pageTurn.getD)
-app.get('/getData',vDataAbs.search,pageTurn.home)
+app.get('/getData',pageTurn.home)
 
 
 //Set the port that you wish the server to listen to
