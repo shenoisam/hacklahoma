@@ -5,8 +5,6 @@
 var express = require('express')
 var logger = require('morgan')
 var bodyParser = require('body-parser')
-var AWS = require('aws-sdk');
-var s3 = new AWS.S3();
 var mysql = require('mysql');
 
 
@@ -33,9 +31,6 @@ app.use(bodyParser.urlencoded({ extended: true}))
 
 //This pretty much just logs stuff out for us.
 app.use(logger('dev'))
-
-
-
 
 
 //Page turner nav bar responses

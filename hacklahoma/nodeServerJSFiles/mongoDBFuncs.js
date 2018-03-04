@@ -14,7 +14,8 @@ var getData = function(response, request, next)
 
     result[1] = "hello?"
     var mark = (result.length);
-    console.log(mark)
+    console.log("Result[0]: " + result[0])
+    console.log("Mark: " + mark)
     request = result;
     next();
    });
