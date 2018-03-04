@@ -10,7 +10,7 @@ var pool = mysql.createPool({
 });
 pool.getConnection(function(err, connection) {
   // Use the connection
-  connection.query('SELECT * FROM participant', function (error, results, fields) {
+  connection.query('SELECT * FROM participant;', function (error, results, fields) {
 
 
     // And done with the connection.
@@ -24,7 +24,7 @@ pool.getConnection(function(err, connection) {
     else
     {
       console.log('--------RESULTS ARRAY ONE ---------')
-      console.log(results[0].emp_name);
+      console.log(results[0].participant_id);
     }
     process.exit();
   });
