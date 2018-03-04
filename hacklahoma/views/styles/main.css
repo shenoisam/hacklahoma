@@ -1,7 +1,8 @@
 #map{
-
+  border-radius: 0px;
   height: 800px;
   width: 100%;
+  margin-top: 70px;
 }
 
 *{
@@ -19,4 +20,12 @@
 }
 #u2 {
   background-color: green;
+}
+
+#navbar {
+	background-image: url("menu_background.jpeg") !important;
+    background-color: #cccccc;
+	position: fixed !important;
+	width: 100% !important;
+	border-radius: 0 !important;
 }
