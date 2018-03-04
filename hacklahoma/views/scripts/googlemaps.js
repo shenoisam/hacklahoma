@@ -21,7 +21,7 @@ var map = new google.maps.Map(document.getElementById('map'), options);
 
 //Listener for the map
 google.maps.event.addListener(map, 'click', function(event){
-addMarker({coords:event.latLng});
+addMarker({coords:event.latLng, iconImage:'../favicon.png'});
 });
 
 //temp array of markers
