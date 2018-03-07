@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
  <head>
-   <title>C Bears Data Visualizer</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="author" content="Samuel Shenoi, Mario Lopez, Brandon Mork, Sean Blonien">
+   <meta name="keywords" content="Vitech, insurance, data visualization, Google Maps API, charts, ">
+   <meta name="description" content="Hacklahoma 2018 project that visually displays life insurance data.">
+   <title>C Bear Necessities</title>
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
    <link rel='stylesheet' href='styles/main.css'>
@@ -13,7 +17,9 @@
 <!--Bootstrap Nav bar-->
 <nav class="navbar sticky-top bg-secondary navbar-expand-lg navbar-dark" id="navbar">
   <img src="favicon.png">
-  <button type="button" class="m-2 navbar-brand btn btn-dark active" href="#">C Bears Data Visualizer</button>
+  <form action="/movePageHome" method="POST">
+    <button type="submit" class="m-2 navbar-brand btn btn-dark active">C Bear Necessities</button>
+  </form>
   <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -46,32 +52,9 @@
   </div>
 </nav>
 
-
-<!-- <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img class="d-block w-100" src="favicon.png" alt="First slide">
-    </div>
-    <div class="carousel-item">
-      <div id='map'></div>
-    </div>
-    <div class="carousel-item">
-      <canvas id="myChart"></canvas>
-    </div>
-  </div>
-  <a class="left carousel-control" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div> -->
-
 <!--Google Maps Div-->
-
 <div id='map'></div>
+<!-- Legend for map -->
 <div class="btn-group-vertical legend dropdown show">
   <a class="btn btn-secondary dropdown-toggle active" href="#" role="button" id="cityDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
   City
@@ -91,12 +74,7 @@
   </div>
 </div>
 
-<!-- Charts Div -->
-<!-- <canvas id="myChart"></canvas> -->
-
 <!--JSON FILE-->
-
-
 
  <!--Bootstrap JS Files -->
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
