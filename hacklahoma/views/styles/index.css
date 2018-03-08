@@ -25,6 +25,7 @@
 
 #navbar {
 	background-image: url("menu_background.jpeg") !important;
+  background-repeat: no-repeat;
   background-color: #cccccc !important;
 	position: fixed !important;
 	width: 100% !important;
@@ -99,6 +100,7 @@ h3 {
 
 body {
   background:  url(https://media.giphy.com/media/7GHRDluBmx9O8/giphy.gif);
+  background-repeat: no-repeat;
   padding-top: 70px;
   height: 800px;
   background-size: cover;
