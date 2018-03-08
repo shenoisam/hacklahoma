@@ -12,12 +12,13 @@ C Bear Necessities is a website that interactively visualizes data using Google 
  [@sblonien](https://github.com/sblonien)
 
 ## Setup (how to run this website)
-1. Download [NodeJS](https://nodejs.org/en) and verify that it is correctly installed using ```node -v```
-2. Clone this repo and navigate to the folder 
-3. Run npm install on the command line - this will give you all of the node modules needed to run this program
-successfully
-4. Run node server.js in the terminal 
-5. Open up your web browser of choice and type in localhost:8888. If your server is running you should be able to see the website
+1. Download [NodeJS](https://nodejs.org/en) and verify that it is correctly installed using ```node -v```.
+2. Verify that npm is installed correctly running ```npm -v``` and then ```npm install npm@latest-g``` to update to the latest version.
+3. Clone this repo using ```git clone https://github.com/shenoisam/hacklahoma.git``` and navigate to the folder on the command line
+4. Run ```npm install``` on the command line - this will give you all of the node modules needed to run this website successfully
+5. Run ```node server.js``` in the terminal 
+6. Open up your web browser of choice and type in ```localhost:8888```. 
+7. If your server is running you should be able to see the website!
 
 
 ## Tech Stack (MEAN minus Angular)
