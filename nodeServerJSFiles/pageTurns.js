@@ -1,24 +1,20 @@
-var mongodbFuncs = require(__dirname+'/mongodbFuncs.js');
 
-var getD = function(request,response){
+var arr = require(__dirname+'/databaseArrayModule.js');
 
-console.log(mongodbFuncs.getData()[0])
-  //dataArray = request.resultArray;
-  var arr  = mongodbFuncs.getData();
-  response.render('VitechGetData.ejs', { data: arr})
-
-}
 
  var gohome = function(request,response){
-  response.render('index.ejs')
+  console.log(arr.length);
+  response.render('index.ejs', { data: arr})
 }
 
  var gomap = function(request,response){
-  response.render('map.ejs')
+   console.log(arr.length);
+  response.render('map.ejs',{ data: arr})
 }
 
  var gochart = function(request,response){
-  response.render('chart.ejs')
+  console.log(arr.length);
+  response.render('chart.ejs',{ data: arr})
 }
 
-module.exports = {getD,gohome,gomap,gochart}
+module.exports = {gohome,gomap,gochart}
