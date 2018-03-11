@@ -5,14 +5,13 @@
 var express = require('express')
 var logger = require('morgan')
 var bodyParser = require('body-parser')
-var mysql = require('mysql');
-
 
 
 //Add in modules
 
 var mongoDBFuncs = require(__dirname+'/nodeServerJSFiles/mongoDBFuncs.js');
 var pageTurn = require(__dirname+'/nodeServerJSFiles/pageTurns');
+
 //Create instance of express app
 var app = express()
 
